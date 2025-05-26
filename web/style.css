@@ -1,0 +1,481 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0f121a; /* fondo oscuro azulado */
+  color: #d0d7de;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Encabezado */
+.encabezado {
+  background-color: #121826;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #3b82f6; /* azul brillante */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #3b82f6; /* azul */
+  user-select: none;
+}
+
+.menu-btn {
+  background: transparent;
+  border: none;
+  color: #3b82f6;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-btn:hover,
+.menu-btn:focus {
+  color: #60a5fa;
+  outline: none;
+}
+
+/* Eslogan */
+.eslogan {
+  padding: 2rem 2rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #ffffff;
+  user-select: none;
+  border-bottom: 1px solid #2c365f;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background-color: #121826;
+  box-shadow: 3px 0 8px rgba(59,130,246,0.5);
+  padding-top: 3rem;
+  transition: left 0.3s ease;
+  z-index: 150;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #d0d7de;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 4px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  user-select: none;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+  background-color: #1e2a52;
+  border-left-color: #3b82f6;
+  color: #60a5fa;
+  outline: none;
+}
+
+/* Contenedor principal */
+.contenedor {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  flex-grow: 1;
+}
+
+/* Tarjetas */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Forzamos que las dos últimas tarjetas estén lado a lado */
+@media(min-width: 700px) {
+  .tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.tarjeta {
+  background-color: #141b33; /* interior más oscuro */
+  border: 2px solid #3b82f6;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(59,130,246,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tarjeta:hover,
+.tarjeta:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(59,130,246,0.5);
+  outline: none;
+}
+
+.tarjeta-imagen {
+  width: 100%;
+  height: 180px;
+  background-color: #121826;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.tarjeta-imagen img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* evita deformación */
+  user-select: none;
+}
+
+.tarjeta-contenido {
+  padding: 1.5rem 1.75rem;
+  color: #cbd5e1;
+}
+
+.tarjeta-contenido h2 {
+  color: #3b82f6;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.tarjeta-contenido p {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Botones por red social con color sólido desde el inicio */
+.boton1 {
+  background-color: #FF0000; /* rojo YouTube */
+  color: #fff;
+  border: 2px solid #FF0000;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.7rem 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.boton1:hover,
+.boton1:focus {
+  background-color: #cc0000;
+  outline: none;
+}
+
+.boton2 {
+  background-color: #69C9D0; /* turquesa TikTok */
+  color: #0f121a;
+  border: 2px solid #69C9D0;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.7rem 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.boton2:hover,
+.boton2:focus {
+  background-color: #4aa9b3;
+  color: #fff;
+  outline: none;
+}
+
+.boton3 {
+  background-color: #7289DA; /* azul Discord */
+  color: #fff;
+  border: 2px solid #7289DA;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.7rem 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.boton3:hover,
+.boton3:focus {
+  background-color: #5a6fbf;
+  outline: none;
+}
+
+.boton4 {
+  background-color: #4F8EF7; /* azul pastel Skin */
+  color: #fff;
+  border: 2px solid #4F8EF7;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.7rem 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.boton4:hover,
+.boton4:focus {
+  background-color: #3b6dd5;
+  outline: none;
+}
+
+/* Tarjeta centrada (Mi skin) */
+.tarjeta.centrada {
+  grid-column: auto;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+/* Formulario de contacto */
+.formulario-container {
+  background-color: #141b33; /* más oscuro */
+  max-width: 600px;
+  margin: 3rem auto 2rem;
+  padding: 2rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(59,130,246,0.3);
+  user-select: none;
+}
+
+.formulario-container h2 {
+  color: #3b82f6;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.form-row input {
+  flex: 1 1 48%;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 2px solid #2c3a7c;
+  background-color: #121826;
+  color: #d0d7de;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-row input:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem 1rem;
+  border-radius: 12px;
+  border: 2px solid #2c3a7c;
+  background-color: #121826;
+  color: #d0d7de;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 140px;
+  transition: border-color 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+textarea:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+.formulario-container button[type="submit"] {
+  background-color: #3b82f6;
+  border: none;
+  color: #0f121a;
+  font-weight: 700;
+  padding: 0.85rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.formulario-container button[type="submit"]:hover,
+.formulario-container button[type="submit"]:focus {
+  background-color: #60a5fa;
+  outline: none;
+}
+
+/* Footer */
+.pie {
+  background-color: #121826;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: #7f8fa4;
+  font-size: 0.9rem;
+  user-select: none;
+  border-top: 1px solid #2c365f;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .form-row {
+    flex-direction: column;
+  }
+  .form-row input {
+    flex: 1 1 100%;
+  }
+}
+
+/* Agrego estilos mínimos para overlay y animaciones fadeIn */
+        body.sidebar-open {
+            overflow: hidden;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -280px;
+            width: 280px;
+            height: 100vh;
+            background: #222;
+            padding: 2rem 1.5rem;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.9);
+            transition: left 0.35s ease;
+            z-index: 150;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .sidebar.open {
+            left: 0;
+        }
+        .sidebar a {
+            color: #ddd;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .sidebar a:hover,
+        .sidebar a:focus {
+            background-color: #333;
+            outline: none;
+            color: #fff;
+        }
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0,0,0,0.6);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            z-index: 140;
+        }
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Botón cerrar menú */
+        .sidebar-close-btn {
+            align-self: flex-end;
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            color: #bbb;
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .sidebar-close-btn:hover,
+        .sidebar-close-btn:focus {
+            color: #fff;
+            outline: none;
+        }
+        /* Scroll smooth */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Animación tarjetas fade-in on scroll */
+        .tarjeta {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .tarjeta.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Botón subir */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 2.5rem;
+            right: 2.5rem;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(76,175,80,0.6);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            z-index: 200;
+        }
+        #scrollTopBtn.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        #scrollTopBtn:hover {
+            background-color: #3b8e3b;
+        }
+        /* Mejor focus visible */
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus {
+            outline: 2px solid #4caf50;
+            outline-offset: 2px;
+        }
+        /* Mensajes de validación formulario */
+        .mensaje-error {
+            color: #f44336;
+            font-size: 0.9rem;
+            margin-top: -1rem;
+            margin-bottom: 1rem;
+            animation: shake 0.3s ease;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25%, 75% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+        }
