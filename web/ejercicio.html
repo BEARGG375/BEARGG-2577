@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>BEARGG</title>
+    <link rel="icon" href="Imagenes/logodeyoutube.jpg" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+<section class="eslogan" id="eslogan">
+    <h1>BEARGG: Donde cada bloque cuenta y cada noche es una aventura.</h1>
+</section>
+
+    <!-- Botón hamburguesa -->
+    <button class="menu-btn" aria-label="Abrir menú" onclick="toggleSidebar()">☰</button>
+
+    <!-- Menú lateral -->
+    <nav id="sidebar" class="sidebar" aria-label="Menú lateral">
+    <a href="javascript:void(0)" aria-label="Cerrar menú" onclick="toggleSidebar()">❌ Cerrar</a>
+    <a href="#inicio">Inicio</a>
+    <a href="https://www.youtube.com/@BEARGG-1" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.tiktok.com/@bear_gg" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://discord.gg/VQhGH2PC" target="_blank" rel="noopener">Discord</a>
+    <a href="#sugerencias">💬 Dudas y Sugerenc</a>
+    </nav>
+
+    <!-- Contenedor tarjetas -->
+    <main class="contenedor" role="main">
+    <article class="tarjeta1" tabindex="0">
+        <div class="tarjeta-imagen">
+        <img class="img" src="./Imagenes/logodeyoutube.jpg" alt="BEARGG FACHERO" loading="lazy" />
+        </div>
+        <div class="tarjeta-contenido">
+        <h2>BEARGG+</h2>
+        <p>🫡 ¡Se viene contenido fresco y divertido que no querrás perderte! ¡suscribete ya!</p>
+        <a class="youtube" href="https://www.youtube.com/@BEARGG-1" target="_blank" rel="noopener noreferrer">
+        <button class="boton1" type="button">YOUTUBE</button>
+        </a>
+        </div>
+    </article>
+
+    <article class="tarjeta2" tabindex="0">
+        <div class="tarjeta-imagen">
+        <img class="img" src="./Imagenes/logodeyoutube.jpg" alt="BEARGG FACHERO" loading="lazy" />
+        </div>
+        <div class="tarjeta-contenido">
+        <h2>BEARGG+</h2>
+        <p>🤣 Minecraft + risas, memes y momentos locos ⛏️ ¡Sigue para no perderte nada!</p>
+        <a class="TIKTOK" href="https://www.tiktok.com/@bear_gg" target="_blank" rel="noopener noreferrer">
+        <button class="boton2" type="button">TIK TOK</button>
+        </a>
+        </div>
+    </article>
+
+        <article class="tarjeta3" tabindex="0">
+        <div class="tarjeta-imagen">
+        <img class="img" src="./Imagenes/logodeyoutube.jpg" alt="BEARGG FACHERO" loading="lazy" />
+        </div>
+        <div class="tarjeta-contenido">
+        <h2>BEARGG+</h2>
+        <p>👻 Aquí compartimos risas y muchas locuras. ¡Únete y pásalo genial con la comunidad!</p>
+        <a class="DISCORD" href="https://discord.gg/VQhGH2PC" target="_blank" rel="noopener noreferrer">
+        <button class="boton3" type="button">DISCORD</button>
+        </a>
+        </div>
+    </article>
+    </main>
+    <article class="tarjeta4" tabindex="0">
+    <div class="tarjeta-imagen">
+    <img class="img" src="Imagenes/beargg-fachero.png" alt="Descarga Skins" loading="lazy" />
+    </div>
+    <div class="tarjeta-contenido">
+    <h2>Mi Skin</h2>
+    <p>🎨 Descarga mi skin exclusiva para Minecraft y dale estilo a tu personaje.</p>
+    <a href="https://minecraft.novaskin.me/post/128a16eylex/beargg" target="_blank" rel="noopener noreferrer">
+    <button class="boton4" type="button">Descarga mi skin aquí</button>
+    </a>
+    </div>
+</article>
+
+
+    <!-- FORMULARIO -->
+    <section id="sugerencias" class="formulario-container">
+    <h2>💬 Contactame </h2>
+    <form target="_blank" action="https://formsubmit.co/davidgelista7@gmail.com" method="POST">
+        <div class="form-row">
+        <input type="text" name="nombre" placeholder="Nombre completo" required />
+        <input type="email" name="correo electronico" placeholder="Correo electrónico" required />
+        </div>
+        <textarea name="mensaje" rows="6" placeholder="Escribe tu propuesta, duda o sugerencia..." required></textarea>
+        <button type="submit">📨 Enviar</button>
+    </form>
+    </section>
+
+    <script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const body = document.body;
+        if (sidebar.classList.contains("open")) {
+        sidebar.classList.remove("open");
+        body.classList.remove("sidebar-open");
+        } else {
+        sidebar.classList.add("open");
+        body.classList.add("sidebar-open");
+    }
+    }
+    </script>
+</body>
+</html>
+
