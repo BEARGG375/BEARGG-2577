@@ -5,7 +5,7 @@
 body {
   margin: 0; padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
-  background: url('Imagenes/cfd0399487bdb29cb2d057c17ddce362.png') no-repeat center fixed;
+  background: url('Imagenes/fondo.png') no-repeat center fixed;
   background-size: cover;
   color: #dcdcdc;
   transition: margin-left 0.3s ease;
