@@ -192,6 +192,12 @@ a:focus, button:focus, input:focus, textarea:focus {
   object-fit: contain;
   user-select: none;
 }
+.tarjeta-skin img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
 .tarjeta-contenido {
   padding: 1rem 1.75rem;
   color: #cbd5e1;
