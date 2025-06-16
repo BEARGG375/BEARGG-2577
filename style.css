@@ -9,8 +9,8 @@ html {
 }
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0f121a;
-  color: #d0d7de;
+  background-color: #f6f8fa; /* blanco muy suave */
+  color: #1a1a1a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,18 +19,18 @@ body.sidebar-open {
   overflow: hidden;
 }
 a:focus, button:focus, input:focus, textarea:focus {
-  outline: 2px solid #4caf50;
+  outline: 2px solid #7ccfcf;
   outline-offset: 2px;
 }
 
 /* Encabezado */
 .encabezado {
-  background: #121826;
+  background: #e6e6e6;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #3b82f6;
+  border-bottom: 2px solid #a3c9cc;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -38,38 +38,38 @@ a:focus, button:focus, input:focus, textarea:focus {
 .logo {
   font-weight: 700;
   font-size: 2rem;
-  color: #3b82f6;
+  color: #7ccfcf; /* azul turquesa suave */
   user-select: none;
 }
 .menu-btn {
   background: transparent;
   border: none;
-  color: #3b82f6;
+  color: #7ccfcf;
   font-size: 2rem;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 .menu-btn:hover,
 .menu-btn:focus {
-  color: #60a5fa;
+  color: #9ad6d6;
   outline: none;
 }
 
 /* Eslogan y pie */
 .eslogan, .pie {
-  background: #000;
+  background: #f3f3f3;
   padding: 2rem;
   text-align: center;
   font-weight: 600;
   font-size: 1.5rem;
-  color: #fff;
+  color: #991b1b; /* rojo opaco */
   user-select: none;
-  border-bottom: 1px solid #2c365f;
+  border-bottom: 1px solid #c4c4c4;
 }
 .pie {
   font-size: 0.9rem;
-  color: #7f8fa4;
-  border-top: 1px solid #2c365f;
+  color: #6b6b6b;
+  border-top: 1px solid #c4c4c4;
 }
 
 /* Sidebar */
@@ -79,8 +79,8 @@ a:focus, button:focus, input:focus, textarea:focus {
   left: -280px;
   width: 280px;
   height: 100vh;
-  background: #121826;
-  box-shadow: 3px 0 8px rgba(59,130,246,0.5);
+  background: #f4f4f4;
+  box-shadow: 3px 0 8px rgba(124, 207, 207, 0.4);
   padding: 3rem 1.5rem 1.5rem;
   z-index: 150;
   transition: left 0.3s ease;
@@ -94,7 +94,7 @@ a:focus, button:focus, input:focus, textarea:focus {
 .sidebar a {
   display: block;
   padding: 0.5rem 1rem;
-  color: #d0d7de;
+  color: #1a1a1a;
   font-weight: 500;
   border-left: 4px solid transparent;
   transition: 0.3s ease;
@@ -104,9 +104,9 @@ a:focus, button:focus, input:focus, textarea:focus {
 }
 .sidebar a:hover,
 .sidebar a:focus {
-  background: #1e2a52;
-  border-left-color: #3b82f6;
-  color: #60a5fa;
+  background: #eaeaea;
+  border-left-color: #7ccfcf;
+  color: #7ccfcf;
   outline: none;
 }
 .sidebar-close-btn {
@@ -114,21 +114,21 @@ a:focus, button:focus, input:focus, textarea:focus {
   background: transparent;
   border: none;
   font-size: 1.5rem;
-  color: #bbb;
+  color: #999;
   cursor: pointer;
   padding: 0.25rem 0.5rem;
   transition: color 0.3s ease;
 }
 .sidebar-close-btn:hover,
 .sidebar-close-btn:focus {
-  color: #fff;
+  color: #1a1a1a;
 }
 
 /* Overlay */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.4);
   opacity: 0;
   visibility: hidden;
   transition: 0.3s ease;
@@ -157,11 +157,11 @@ a:focus, button:focus, input:focus, textarea:focus {
   }
 }
 .tarjeta {
-  background: #141b33;
-  border: 2px solid #3b82f6;
+  background: #ffffff;
+  border: 2px solid #d6d6d6;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(59,130,246,0.25);
+  box-shadow: 0 4px 10px rgba(124, 207, 207, 0.15);
   transition: 0.3s ease;
   cursor: pointer;
   user-select: none;
@@ -175,13 +175,13 @@ a:focus, button:focus, input:focus, textarea:focus {
 .tarjeta:hover,
 .tarjeta:focus-within {
   transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(59,130,246,0.5);
+  box-shadow: 0 10px 20px rgba(124, 207, 207, 0.3);
   outline: none;
 }
 .tarjeta-imagen {
   width: 100%;
   height: 180px;
-  background: #061943;
+  background: #ffecec;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,13 +194,13 @@ a:focus, button:focus, input:focus, textarea:focus {
   user-select: none;
 }
 
-/* Tarjeta especial (como skins o similar) */
+/* Tarjeta especial (skins o similar) */
 .tarjeta-skin {
-  background: #1a1f2e;
-  border: 2px solid #4a90e2;
+  background: #fafafa;
+  border: 2px solid #cce8f1;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+  box-shadow: 0 4px 15px rgba(124, 207, 207, 0.2);
   transition: 0.3s ease;
   cursor: pointer;
   user-select: none;
@@ -210,16 +210,16 @@ a:focus, button:focus, input:focus, textarea:focus {
 .tarjeta-skin:hover,
 .tarjeta-skin:focus-within {
   transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(74, 144, 226, 0.4);
+  box-shadow: 0 10px 20px rgba(124, 207, 207, 0.4);
 }
 .tarjeta-skin .tarjeta-imagen {
-  background: #0d1320;
+  background: #e3f6f6;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 200px;
   padding: 1rem;
-  border-bottom: 2px solid #4a90e2;
+  border-bottom: 2px solid #b6dfe2;
 }
 .tarjeta-skin .tarjeta-imagen img {
   max-height: 100%;
@@ -228,15 +228,15 @@ a:focus, button:focus, input:focus, textarea:focus {
   display: block;
   margin: 0 auto;
   user-select: none;
-  filter: drop-shadow(0 0 8px rgba(74, 144, 226, 0.25));
+  filter: drop-shadow(0 0 8px rgba(124, 207, 207, 0.25));
 }
 .tarjeta-skin .tarjeta-contenido {
   padding: 1rem 1.75rem;
-  color: #cbd5e1;
+  color: #1a1a1a;
   text-align: center;
 }
 .tarjeta-skin .tarjeta-contenido h2 {
-  color: #4a90e2;
+  color: #7ccfcf;
   font-weight: 700;
   margin-bottom: 0.6rem;
 }
@@ -244,6 +244,8 @@ a:focus, button:focus, input:focus, textarea:focus {
   font-size: 1rem;
   margin-bottom: 1.2rem;
 }
+
+/* Botones dentro de las tarjetas: NO se modifican */
 .tarjeta-skin .boton2 {
   background: #4a90e2;
   color: #0f121a;
@@ -262,7 +264,7 @@ a:focus, button:focus, input:focus, textarea:focus {
   color: #fff;
 }
 
-/* Botones (puedes definir estilos específicos más adelante si los necesitas) */
+/* Botones extra */
 .boton1 {}
 .boton2 {}
 .boton3 {}
