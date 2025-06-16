@@ -197,6 +197,7 @@ a:focus, button:focus, input:focus, textarea:focus {
   height: 100%;
   object-fit: contain;
   user-select: none;
+  align-items: center;
 }
 .tarjeta-contenido {
   padding: 1rem 1.75rem;
