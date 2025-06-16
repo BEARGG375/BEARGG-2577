@@ -1,3 +1,4 @@
+/* Reset y base */
 * {
   margin: 0;
   padding: 0;
@@ -82,7 +83,7 @@ a:focus, button:focus, input:focus, textarea:focus {
   box-shadow: 3px 0 8px rgba(59,130,246,0.5);
   padding: 3rem 1.5rem 1.5rem;
   z-index: 150;
-  transition: linear 0.3s ease;
+  transition: left 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -187,230 +188,83 @@ a:focus, button:focus, input:focus, textarea:focus {
   overflow: hidden;
 }
 .tarjeta-imagen img {
-  width: 120px; /* tamaño más pequeño */
+  width: 120px;
   height: auto;
   object-fit: contain;
   user-select: none;
 }
-.tarjeta-skin img {
-  width: auto;
-  height: 60%;
-  object-fit: contain;
+
+/* Tarjeta especial (como skins o similar) */
+.tarjeta-skin {
+  background: #1a1f2e;
+  border: 2px solid #4a90e2;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+  transition: 0.3s ease;
+  cursor: pointer;
   user-select: none;
-  display: block;
-  margin: 0 auto;
-}
-.tarjeta-contenido {
-  padding: 1rem 1.75rem;
-  color: #cbd5e1;
-}
-.tarjeta-contenido h2 {
-  color: #3b82f6;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-}
-.tarjeta-contenido p {
-  font-size: 1rem;
-  margin-bottom: 1.2rem;
-}
-.tarjeta.centrada {
-  grid-column: auto;
   max-width: 450px;
   margin: 0 auto;
 }
-
-/* Botones */
-.boton1, .boton2, .boton3, .boton4, .boton-whatsapp {
-  border: 2px solid;
-  font-weight: 600;
-  border-radius: 30px;
-  padding: 0.7rem 1.6rem;
-  cursor: pointer;
-  transition: 0.3s ease;
-  user-select: none;
+.tarjeta-skin:hover,
+.tarjeta-skin:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(74, 144, 226, 0.4);
 }
-.boton1 {
-  background: #FF0000; color: #fff; border-color: #FF0000;
-}
-.boton1:hover, .boton1:focus {
-  background: #cc0000;
-}
-.boton2 {
-  background: #69C9D0; color: #0f121a; border-color: #69C9D0;
-}
-.boton2:hover, .boton2:focus {
-  background: #4aa9b3; color: #fff;
-}
-.boton3 {
-  background: #7289DA; color: #fff; border-color: #7289DA;
-}
-.boton3:hover, .boton3:focus {
-  background: #5a6fbf;
-}
-.boton4 {
-  background: #4F8EF7; color: #fff; border-color: #4F8EF7;
-}
-.boton4:hover, .boton4:focus {
-  background: #3b6dd5;
-}
-.boton-whatsapp {
-  background: #25D366; color: white; border: none; border-radius: 12px; font-size: 1rem;
-}
-.boton-whatsapp:hover {
-  background: #1ebe5b;
-}
-
-/* Formulario */
-.formulario-container {
-  background: #141b33;
-  max-width: 600px;
-  margin: 3rem auto 2rem;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 18px rgba(59,130,246,0.3);
-  user-select: none;
-}
-.formulario-container h2 {
-  color: #3b82f6;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.form-row {
+.tarjeta-skin .tarjeta-imagen {
+  background: #0d1320;
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1.2rem;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  padding: 1rem;
+  border-bottom: 2px solid #4a90e2;
 }
-.form-row input, textarea {
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  border: 2px solid #2c3a7c;
-  background: #121826;
-  color: #d0d7de;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-textarea {
-  width: 100%;
-  min-height: 140px;
-  resize: vertical;
-  margin-bottom: 1.5rem;
-}
-.form-row input:focus, textarea:focus {
-  border-color: #3b82f6;
-  outline: none;
-}
-.formulario-container button[type="submit"] {
-  background: #3b82f6;
-  color: #0f121a;
-  font-weight: 700;
-  padding: 0.85rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 30px;
-  cursor: pointer;
+.tarjeta-skin .tarjeta-imagen img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
   display: block;
   margin: 0 auto;
-  transition: background 0.3s ease;
-  border: none;
   user-select: none;
+  filter: drop-shadow(0 0 8px rgba(74, 144, 226, 0.25));
 }
-.formulario-container button:hover,
-.formulario-container button:focus {
-  background: #60a5fa;
-}
-
-/* Responsive */
-@media (max-width: 650px) {
-  .form-row {
-    flex-direction: column;
-  }
-  .form-row input {
-    flex: 1 1 100%;
-  }
-}
-
-/* Scroll to top */
-#scrollTopBtn {
-  position: fixed;
-  bottom: 2.5rem;
-  right: 2.5rem;
-  background: #4caf50;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 1.8rem;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(76,175,80,0.6);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease;
-  z-index: 200;
-}
-#scrollTopBtn.show {
-  opacity: 1;
-  visibility: visible;
-}
-#scrollTopBtn:hover {
-  background: #3b8e3b;
-}
-
-/* Validación */
-.mensaje-error {
-  color: #f44336;
-  font-size: 0.9rem;
-  margin: -1rem 0 1rem;
-  animation: shake 0.3s ease;
-}
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25%, 75% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-}
-
-/* Video */
-.video-destacado {
-  padding: 3rem 1rem;
-  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
-  color: #fff;
+.tarjeta-skin .tarjeta-contenido {
+  padding: 1rem 1.75rem;
+  color: #cbd5e1;
   text-align: center;
 }
-.video-contenido {
-  max-width: 800px;
-  margin: 0 auto;
-  animation: fadeInUp 1s ease-in-out;
-}
-.video-contenido h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+.tarjeta-skin .tarjeta-contenido h2 {
+  color: #4a90e2;
   font-weight: 700;
-  color: #ffdb70;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  margin-bottom: 0.6rem;
 }
-.video-marco {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+.tarjeta-skin .tarjeta-contenido p {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
 }
-.video-marco iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.tarjeta-skin .boton2 {
+  background: #4a90e2;
+  color: #0f121a;
   border: none;
-  border-radius: 16px;
+  border-radius: 30px;
+  padding: 0.7rem 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: inline-block;
+  margin-top: 0.5rem;
 }
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+.tarjeta-skin .boton2:hover,
+.tarjeta-skin .boton2:focus {
+  background: #3b73c4;
+  color: #fff;
 }
 
+/* Botones (puedes definir estilos específicos más adelante si los necesitas) */
+.boton1 {}
+.boton2 {}
+.boton3 {}
+.boton4 {}
+.boton-whatsapp {}
