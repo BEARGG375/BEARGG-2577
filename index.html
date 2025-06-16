@@ -138,7 +138,29 @@
         <script>
         // Toggle sidebar y overlay
      
-        }
+           function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("overlay");
+            const menuBtn = document.querySelector(".menu-btn");
+            const isOpen = sidebar.classList.contains("open");
+
+            if (isOpen) {
+            sidebar.classList.remove("open");
+            overlay.classList.remove("active");
+            document.body.classList.remove("sidebar-open");
+            menuBtn.setAttribute("aria-expanded", "false");
+            sidebar.setAttribute("aria-hidden", "true");
+            menuBtn.focus();
+            } else {
+            sidebar.classList.add("open");
+            overlay.classList.add("active");
+            document.body.classList.add("sidebar-open");
+            menuBtn.setAttribute("aria-expanded", "true");
+            sidebar.setAttribute("aria-hidden", "false");
+            // Focus primer enlace del menú para accesibilidad
+            sidebar.querySelector("a").focus();
+            }
+           }
 
         // Animar tarjetas al hacer scroll
         function animateCardsOnScroll() {
