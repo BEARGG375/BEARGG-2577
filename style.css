@@ -187,8 +187,8 @@ a:focus, button:focus, input:focus, textarea:focus {
   overflow: hidden;
 }
 .tarjeta-imagen img {
-  max-width: 50%;
-  max-height: 50%;
+  width: 120px; /* tamaño más pequeño */
+  height: auto;
   object-fit: contain;
   user-select: none;
 }
