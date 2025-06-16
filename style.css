@@ -75,7 +75,7 @@ a:focus, button:focus, input:focus, textarea:focus {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -300px;
+  left: -250px;
   width: 280px;
   height: 100vh;
   background: #121826;
